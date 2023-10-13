@@ -1,0 +1,27 @@
+class ReservaFacade {
+   ReservaFacade() {
+   }
+
+   public void fazerReservaQuarto(int var1, String var2, String var3, String var4) {
+      boolean var5 = QuartoService.verificarDisponibilidade(var1);
+      if (var5) {
+         HospedeService var6 = new HospedeService();
+         var6.registrarHospede(var4);
+         System.out.println("Reservando quarto " + var1 + " para " + var4);
+         QuartoService.marcarComoOcupado(var1);
+      } else {
+         System.out.println("Quarto " + var1 + " número está disponível.");
+      }
+
+   }
+
+   public void cancelarReserva(int var1) {
+      System.out.println("Cancelando reserva do quarto " + var1);
+      QuartoService.marcarComoDisponivel(var1);
+   }
+
+   public void realizarPagamento(int var1, double var2) {
+      PagamentoService var4 = new PagamentoService();
+      var4.realizarPagamento(var1, var2);
+   }
+}

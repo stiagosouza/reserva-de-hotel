@@ -1,0 +1,6 @@
+public class PagamentoService {
+    public void realizarPagamento(int numeroQuarto, double valor) {
+        // Implemente a lógica para realizar o pagamento
+        System.out.println("Realizando pagamento do quarto " + numeroQuarto + " no valor de R$" + valor);
+    }
+}

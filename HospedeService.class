@@ -1,0 +1,6 @@
+public class HospedeService {
+    public void registrarHospede(String nomeHospede) {
+        // Implemente a lógica para registrar um hóspede
+        System.out.println("Registrando hóspede: " + nomeHospede);
+    }
+}

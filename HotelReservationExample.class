@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class HotelReservationExample {
+   public HotelReservationExample() {
+   }
+
+   public static void main(String[] var0) {
+      ReservaFacade var1 = new ReservaFacade();
+      Scanner var2 = new Scanner(System.in);
+      System.out.print("Informe o número do quarto: ");
+      int var3 = var2.nextInt();
+      System.out.print("Informe a data de entrada: ");
+      String var4 = var2.next();
+      System.out.print("Informe a data de saída: ");
+      String var5 = var2.next();
+      var2.nextLine();
+      System.out.print("Informe o nome do hóspede: ");
+      String var6 = var2.nextLine();
+      var1.fazerReservaQuarto(var3, var4, var5, var6);
+      double var7 = 500.0;
+      var1.realizarPagamento(var3, var7);
+      var1.cancelarReserva(var3);
+      var2.close();
+   }
+}

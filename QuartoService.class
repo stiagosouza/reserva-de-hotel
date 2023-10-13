@@ -1,0 +1,22 @@
+class QuartoService {
+    private static final Map<Integer, String> quartosDisponiveis = new HashMap<>();
+
+    static {
+        quartosDisponiveis.put(101, "disponível");
+        quartosDisponiveis.put(102, "disponível");
+        quartosDisponiveis.put(103, "disponível");
+    }
+
+    public static boolean verificarDisponibilidade(int numeroQuarto) {
+        String status = quartosDisponiveis.get(numeroQuarto);
+        return "disponível".equals(status); // Verifica se o status é "disponível"
+    }
+
+    public static void marcarComoOcupado(int numeroQuarto) {
+        quartosDisponiveis.put(numeroQuarto, "ocupado"); // Marcar o quarto como ocupado
+    }
+
+    public static void marcarComoDisponivel(int numeroQuarto) {
+        quartosDisponiveis.put(numeroQuarto, "disponível"); // Marcar o quarto como disponível novamente
+    }
+}

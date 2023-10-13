@@ -1,0 +1,34 @@
++--------------------------------+
+|           ReservaFacade         |
++--------------------------------+
+| - quartoService: QuartoService  |
+| - hospedeService: HospedeService|
+| - pagamentoService: PagamentoService |
++--------------------------------+
+| + fazerReservaQuarto(numeroQuarto: int, dataEntrada: String, dataSaida: String, nomeHospede: String): void |
+| + cancelarReserva(numeroQuarto: int): void |
+| + realizarPagamento(numeroQuarto: int, valor: double): void |
+| + verificarDisponibilidade(numeroQuarto: int, dataEntrada: String, dataSaida: String): boolean |
++--------------------------------+
+
++--------------------------------+
+|        QuartoService            |
++--------------------------------+
+| - quartosDisponiveis: Map<Integer, String> |
++--------------------------------+
+| + verificarDisponibilidade(numeroQuarto: int): boolean |
+| + marcarComoOcupado(numeroQuarto: int): void |
+| + marcarComoDisponivel(numeroQuarto: int): void |
++--------------------------------+
+
++--------------------------------+
+|       HospedeService            |
++--------------------------------+
+| + registrarHospede(nomeHospede: String): void |
++--------------------------------+
+
++--------------------------------+
+|    PagamentoService             |
++--------------------------------+
+| + realizarPagamento(numeroQuarto: int, valor: double): void |
++--------------------------------+
